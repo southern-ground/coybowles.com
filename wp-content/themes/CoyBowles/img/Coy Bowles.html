@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html ng-app="CoyApp">
+<head>
+  <title>Coy Bowles</title>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://localhost:8888/wp-content/themes/CoyBowles/style.css"/>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="http://localhost:8888/wp-content/themes/CoyBowles/main.js"></script>
+  <meta name='robots' content='noindex,follow' />
+<link rel="alternate" type="application/rss+xml" title="Test Wordpress &raquo; Gear Comments Feed" href="http://localhost:8888/gear/feed/" />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.1.10' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://localhost:8888/wp-includes/css/dashicons.min.css?ver=4.1.10' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://localhost:8888/wp-includes/css/admin-bar.min.css?ver=4.1.10' type='text/css' media='all' />
+<link rel='stylesheet' id='cff-css'  href='http://localhost:8888/wp-content/plugins/custom-facebook-feed/css/cff-style.css?ver=2.3.10' type='text/css' media='all' />
+<link rel='stylesheet' id='cff-font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css?ver=4.2.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://localhost:8888/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://localhost:8888/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8888/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost:8888/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.1.10" />
+<link rel='canonical' href='http://localhost:8888/gear/' />
+<link rel='shortlink' href='http://localhost:8888/?p=78' />
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+</head>
+<body ng-style="{ overflow: ctrl.tourOpened ? 'hidden' : 'auto' }" ng-cloak ng-controller="MainCtrl as ctrl">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1644901739106799',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+  <div class="container gear">
+<div class="hero hero_gear">
+  <div class="social">
+  <a class="fb" target="_blank" href="https://www.facebook.com/Coy-Bowles-943915212383202/">
+  </a>
+  <a class="yt" target="_blank" href="https://www.youtube.com/user/coybowles">
+  </a>
+  <a class="tw" target="_blank" href="https://twitter.com/coydroy">
+  </a>
+  <a class="ig" target="_blank" href="https://www.instagram.com/coybowles/">
+  </a>
+</div>
+<div class="nav" cb-scroll ctrl="ctrl" ng-class="{ collapsed: ctrl.navCollapsed }">
+  <div class="collapse" ng-click="ctrl.navCollapsed = !ctrl.navCollapsed">
+  </div>
+  <a href="/">
+    <img class="logo" src="http://localhost:8888/wp-content/themes/CoyBowles/img/logo.png" />
+  </a>
+  <div class="nav_stuff">
+    <a href="http://localhost:8888/music/">MUSIC</a>
+    <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/navDivider.png" />
+    <a href="http://localhost:8888/books/">BOOKS</a>
+    <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/navDivider.png" />
+    <a href="http://localhost:8888/gear/">GEAR</a>
+    <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/navDivider.png" />
+    <a href="javascript:void(0);" ng-click="ctrl.tourOpened = true">TOUR</a>
+    <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/navDivider.png" />
+    <a href="http://localhost:8888/about/">ABOUT</a>
+    <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/navDivider.png" />
+    <a href="https://www.merchmountain.com/coybowles" target="_blank">SHOP</a>
+
+    <img style="margin-top: 25px" src="http://localhost:8888/wp-content/themes/CoyBowles/img/contactText.png" />
+    <a class="contact_link" href="mailto:info@coyboyles.com" />INFO@COYBOYLES.COM</a>
+    <div class="social">
+      <a class="fb" target="_blank" href="https://www.facebook.com/Coy-Bowles-943915212383202/">
+      </a>
+      <a class="yt" target="_blank" href="https://www.youtube.com/user/coybowles">
+      </a>
+      <a class="tw" target="_blank" href="https://twitter.com/coydroy">
+      </a>
+      <a class="ig" target="_blank" href="https://www.instagram.com/coybowles/">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="tour_wrapper" ng-hide="!ctrl.tourOpened">
+  <div class="section tour">
+    <a class="close_icon pull-right" ng-click="ctrl.tourOpened = false;">
+      <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+    </a>
+
+
+    <h1>ZAC BROWN BAND</h1>
+
+    <iframe style="width: 100%; height: 450px" src="http://www.zacbrownband.com/tour"></iframe>
+
+
+    <h1>COY BOWLES AND THE FELLOWSHIP</h1>
+
+    <table>
+              <tr class="tour_date">
+          <td>
+            <span class="date">
+                            Mar 16, 2016            </span>
+          </td>
+          <td>
+            <span class="title">
+              A Place            </span>
+          </td>
+          <td>
+            <span class="venue">
+              Charleston, SC            </span>
+          </td>
+          <td>
+            <a href="http://google.com" target="_blank" class="button">
+              Info
+            </a>
+          </td>
+        </tr>
+              <tr class="tour_date">
+          <td>
+            <span class="date">
+                            Mar 25, 2016            </span>
+          </td>
+          <td>
+            <span class="title">
+              fsdfds            </span>
+          </td>
+          <td>
+            <span class="venue">
+              fsdfsdf            </span>
+          </td>
+          <td>
+            <a href="dsfdsfsd" target="_blank" class="button">
+              Info
+            </a>
+          </td>
+        </tr>
+          </table>
+  </div>
+</div></div>
+
+<div style="text-align:center;">
+  <img class="styledHeader" src="http://localhost:8888/wp-content/themes/CoyBowles/img/gearHeader.png" />
+</div>
+
+<div class="feed_wrapper expanded" ng-show="ctrl.feedExpanded">
+  <a class="page_link prev" ng-click="ctrl.prevMiniPage();"></a>
+  <a class="page_link next" ng-click="ctrl.nextMiniPage();"></a>
+  <div class="section feed expanded">
+    <p>
+      <a class="close_icon" ng-click="ctrl.hideExpanded()">
+        <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+      </a>
+    </p>
+    <div class="videoWrapper">
+      <iframe ng-src="{{ ctrl.currentVideoSrc }}">
+      </iframe>
+    </div>
+
+    <div class="mini_feed">
+      <div class="page" ng-style="{ 'left': -100 * ctrl.miniPage + '%' }">
+        <div class="section_quarter video"
+          ng-click="ctrl.showVideo(video.id);"
+          ng-repeat="video in ctrl.videos"
+          ng-style="{ 'background-image': 'url(http://img.youtube.com/vi/{{ video.id }}/maxresdefault.jpg)' }">
+          <p>
+           {{ video.title }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="feed_wrapper" ng-hide="ctrl.feedExpanded">
+  <a class="page_link prev" ng-click="ctrl.prevMainPage();"></a>
+  <a class="page_link next" ng-click="ctrl.nextMainPage();"></a>
+
+  <div class="section feed video_feed" ng-show="ctrl.currentFeed == 'video'" ng-init="ctrl.setYtPlaylist('PLvQEfjwePiNFeCuWTnp-3oRu5kI9o5fSW')">
+    <div class="page" ng-style="{ 'left': -100 * ctrl.mainPage + '%' }">
+      <div class="section_half video"
+        ng-click="ctrl.showVideo(video.id);"
+        ng-repeat="video in ctrl.videos"
+        ng-style="{ 'background-image': 'url(http://img.youtube.com/vi/{{ video.id }}/maxresdefault.jpg)' }">
+        <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/play.png" />
+
+        <p>
+         {{ video.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="gear_page">
+  <div class="header">
+    GUITARS
+  </div>
+  <div class="section guitars">
+    <a ng-hide="ctrl.expandedOpen != null || ctrl.videoOpen != null;" class="guitar_mini_toggle prev" href="javascript:void(0)" ng-click="ctrl.prevMiniGuitarPage($event)"></a>
+    <a ng-hide="ctrl.expandedOpen != null || ctrl.videoOpen != null;" class="guitar_mini_toggle next" href="javascript:void(0)" ng-click="ctrl.nextMiniGuitarPage($event)"></a>
+
+
+              
+      <div ng-init='ctrl.guitars.push({
+          id: 1,
+          name: "Test Guitar",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2016/01/Untitled-1_220x220_acf_cropped.png"
+        })'>
+      </div>
+
+      <div class="guitar_img guitars current" ng-hide="ctrl.expandedOpen != null || ctrl.videoOpen != null;" ng-click="ctrl.expandedOpen = 1;">
+        <img src="http://localhost:8888/wp-content/uploads/2016/01/Untitled-1_220x220_acf_cropped.png" />
+        <div class="hover">
+          <span>
+          <img class="mini_img" style="display: none" src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+          Test Guitar          <br/>
+                      <span class="subtext">
+              tesfdsjf lkfdsfs            </span>
+            </span>
+                      <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+                  </div>
+      </div>
+
+      <div class="section video expanded" ng-show="ctrl.videoOpen == 1">
+        <a class="close_icon" ng-click="ctrl.videoOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <br/>
+        <br/>
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/fsdfsdfdsf" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="section guitar_expanded 1" ng-show="ctrl.expandedOpen == 1">
+        <a class="close_icon" ng-click="ctrl.expandedOpen = null; ctrl.guitarDescOpen = false">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          <span style="display: none" ng-click="ctrl.guitarDescOpen = !ctrl.guitarDescOpen" class="guitar_description_toggle">
+            <span ng-if="!ctrl.guitarDescOpen">+</span>
+            <span ng-if="ctrl.guitarDescOpen">-</span>
+          </span>
+
+          Test Guitar        </div>
+        <div class="section_half" ng-hide="ctrl.guitarDescOpen">
+          <img ng-hide="ctrl.gtFlip1" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-1.png"/>
+          <img ng-hide="!ctrl.gtFlip1" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-21.png"/>
+        </div><div class="section_half guitar_desc" ng-class="{ open: ctrl.guitarDescOpen }">
+          <div class="mini_description description" style="display: none">
+            fsdf            fsdfsdf          </div>
+          <div class="description" ng-hide="ctrl.desc2Open == 1">
+            fsdf          </div>
+          <div class="description" ng-show="ctrl.desc2Open == 1">
+            fsdfsdf          </div>
+                      <div class="pagin">
+              <span ng-hide="ctrl.desc2Open == 1">1</span><span ng-show="ctrl.desc2Open == 1">2</span>/2
+              <span ng-click="ctrl.desc2Open = null" class="prev"></span>
+              <span ng-click="ctrl.desc2Open = 1" class="next"></span>
+            </div>
+                    <div class="extry_stuff">
+            <img ng-click="ctrl.gtFlip1 = !ctrl.gtFlip1;" ng-hide="ctrl.gtFlip1" class="back_img" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-21.png"/>
+            <img ng-click="ctrl.gtFlip1 = !ctrl.gtFlip1;" ng-hide="!ctrl.gtFlip1" class="back_img" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-1.png"/>
+            <div ng-click="ctrl.videoOpen = 1; ctrl.expandedOpen = null" class="video_img" style="background-image: url(http://img.youtube.com/vi/fsdfsdfdsf/maxresdefault.jpg)">
+              <img style="width: 50px;" src="http://localhost:8888/wp-content/themes/CoyBowles/img/play.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div style="position: relative">
+          <a class="guitar_page prev" ng-click="ctrl.prevGuitarPage();"></a>
+          <a class="guitar_page next" ng-click="ctrl.nextGuitarPage();"></a>
+        </div>
+        <div class="resto_images guitar">
+          <div class="page" ng-style="{ 'left': -100 * ctrl.guitarPage + '%' }">
+            <div ng-repeat="guitar in ctrl.guitars" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedOpen == guitar.id }" ng-click="ctrl.expandedOpen = guitar.id">
+                <img ng-src="{{ guitar.thumbnail }}" />
+                <div class="hover">
+                  {{ guitar.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div ng-init='ctrl.guitars.push({
+          id: 2,
+          name: "Ibanez Artist \"Iba\"",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2016/01/Untitled-4_220x220_acf_cropped1.png"
+        })'>
+      </div>
+
+      <div class="guitar_img guitars " ng-hide="ctrl.expandedOpen != null || ctrl.videoOpen != null;" ng-click="ctrl.expandedOpen = 2;">
+        <img src="http://localhost:8888/wp-content/uploads/2016/01/Untitled-4_220x220_acf_cropped1.png" />
+        <div class="hover">
+          <span>
+          <img class="mini_img" style="display: none" src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+          Ibanez Artist "Iba"          <br/>
+                      <span class="subtext">
+              fdsfds fsddsf            </span>
+            </span>
+                      <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/acoustic.png"/>
+                  </div>
+      </div>
+
+      <div class="section video expanded" ng-show="ctrl.videoOpen == 2">
+        <a class="close_icon" ng-click="ctrl.videoOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <br/>
+        <br/>
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/d5kN_ZaW7po" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="section guitar_expanded 2" ng-show="ctrl.expandedOpen == 2">
+        <a class="close_icon" ng-click="ctrl.expandedOpen = null; ctrl.guitarDescOpen = false">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          <span style="display: none" ng-click="ctrl.guitarDescOpen = !ctrl.guitarDescOpen" class="guitar_description_toggle">
+            <span ng-if="!ctrl.guitarDescOpen">+</span>
+            <span ng-if="ctrl.guitarDescOpen">-</span>
+          </span>
+
+          Ibanez Artist "Iba"        </div>
+        <div class="section_half" ng-hide="ctrl.guitarDescOpen">
+          <img ng-hide="ctrl.gtFlip2" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-1.png"/>
+          <img ng-hide="!ctrl.gtFlip2" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-21.png"/>
+        </div><div class="section_half guitar_desc" ng-class="{ open: ctrl.guitarDescOpen }">
+          <div class="mini_description description" style="display: none">
+            I went into a music store in Georgia when I was 18 years old. I had saved up $400 from my birthday and Christmas and was going to buy a better Electric guitar. I went to a store in Fayetteville. I walked in and saw this Ibanez Artist and thought it was badass. I asked the owner of I could play it. I plugged it in and kind of quietly ran it through whatever paces I knew to do at the time. I played all the riffs I knew in a distorted sound and strummed some chords with it clean sounding. I then went outside and asked my mom for another $400 so I could buy this $800 guitar. She said no way José. <br />
+<br />
+When I went back in, another kid was playing the guitar. He was about 11 years old. It was like seeing someone holding hands with your girlfriend. I walked around the store wasting time until this punk kid would let me play this guitar one more time before I left without buying anything. He sat the guitar down on the hanger haphazardly and it fell off the wall and knocked a big chip out of it. The kid ran out of the store and my next words were, &quot;How much for the guitar now?” I ran outside and told my mom the story while gasping for air with excitement. I calmed myself down and then said &quot;He would sell the guitar for $600 now. Mom you gotta let me borrow $200.” She thought it was a cool story and knew that I was a hard worker             I went into a music store in Georgia when I was 18 years old. I had saved up $400 from my birthday and Christmas and was going to buy a better Electric guitar. I went to a store in Fayetteville. I walked in and saw this Ibanez Artist and thought it was badass. I asked the owner of I could play it. I plugged it in and kind of quietly ran it through whatever paces I knew to do at the time. I played all the riffs I knew in a distorted sound and strummed some chords with it clean sounding. I then went outside and asked my mom for another $400 so I could buy this $800 guitar. She said no way José. <br />
+<br />
+When I went back in, another kid was playing the guitar. He was about 11 years old. It was like seeing someone holding hands with your girlfriend. I walked around the store wasting time until this punk kid would let me play this guitar one more time before I left without buying anything. He sat the guitar down on the hanger haphazardly and it fell off the wall and knocked a big chip out of it. The kid ran out of the store and my next words were, &quot;How much for the guitar now?” I ran outside and told my mom the story while gasping for air with excitement. I calmed myself down and then said &quot;He would sell the guitar for $600 now. Mom you gotta let me borrow $200.” She thought it was a cool story and knew that I was a hard worker           </div>
+          <div class="description" ng-hide="ctrl.desc2Open == 2">
+            I went into a music store in Georgia when I was 18 years old. I had saved up $400 from my birthday and Christmas and was going to buy a better Electric guitar. I went to a store in Fayetteville. I walked in and saw this Ibanez Artist and thought it was badass. I asked the owner of I could play it. I plugged it in and kind of quietly ran it through whatever paces I knew to do at the time. I played all the riffs I knew in a distorted sound and strummed some chords with it clean sounding. I then went outside and asked my mom for another $400 so I could buy this $800 guitar. She said no way José. <br />
+<br />
+When I went back in, another kid was playing the guitar. He was about 11 years old. It was like seeing someone holding hands with your girlfriend. I walked around the store wasting time until this punk kid would let me play this guitar one more time before I left without buying anything. He sat the guitar down on the hanger haphazardly and it fell off the wall and knocked a big chip out of it. The kid ran out of the store and my next words were, &quot;How much for the guitar now?” I ran outside and told my mom the story while gasping for air with excitement. I calmed myself down and then said &quot;He would sell the guitar for $600 now. Mom you gotta let me borrow $200.” She thought it was a cool story and knew that I was a hard worker           </div>
+          <div class="description" ng-show="ctrl.desc2Open == 2">
+            I went into a music store in Georgia when I was 18 years old. I had saved up $400 from my birthday and Christmas and was going to buy a better Electric guitar. I went to a store in Fayetteville. I walked in and saw this Ibanez Artist and thought it was badass. I asked the owner of I could play it. I plugged it in and kind of quietly ran it through whatever paces I knew to do at the time. I played all the riffs I knew in a distorted sound and strummed some chords with it clean sounding. I then went outside and asked my mom for another $400 so I could buy this $800 guitar. She said no way José. <br />
+<br />
+When I went back in, another kid was playing the guitar. He was about 11 years old. It was like seeing someone holding hands with your girlfriend. I walked around the store wasting time until this punk kid would let me play this guitar one more time before I left without buying anything. He sat the guitar down on the hanger haphazardly and it fell off the wall and knocked a big chip out of it. The kid ran out of the store and my next words were, &quot;How much for the guitar now?” I ran outside and told my mom the story while gasping for air with excitement. I calmed myself down and then said &quot;He would sell the guitar for $600 now. Mom you gotta let me borrow $200.” She thought it was a cool story and knew that I was a hard worker           </div>
+                      <div class="pagin">
+              <span ng-hide="ctrl.desc2Open == 2">1</span><span ng-show="ctrl.desc2Open == 2">2</span>/2
+              <span ng-click="ctrl.desc2Open = null" class="prev"></span>
+              <span ng-click="ctrl.desc2Open = 2" class="next"></span>
+            </div>
+                    <div class="extry_stuff">
+            <img ng-click="ctrl.gtFlip2 = !ctrl.gtFlip2;" ng-hide="ctrl.gtFlip2" class="back_img" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-21.png"/>
+            <img ng-click="ctrl.gtFlip2 = !ctrl.gtFlip2;" ng-hide="!ctrl.gtFlip2" class="back_img" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-1.png"/>
+            <div ng-click="ctrl.videoOpen = 2; ctrl.expandedOpen = null" class="video_img" style="background-image: url(http://img.youtube.com/vi/d5kN_ZaW7po/maxresdefault.jpg)">
+              <img style="width: 50px;" src="http://localhost:8888/wp-content/themes/CoyBowles/img/play.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div style="position: relative">
+          <a class="guitar_page prev" ng-click="ctrl.prevGuitarPage();"></a>
+          <a class="guitar_page next" ng-click="ctrl.nextGuitarPage();"></a>
+        </div>
+        <div class="resto_images guitar">
+          <div class="page" ng-style="{ 'left': -100 * ctrl.guitarPage + '%' }">
+            <div ng-repeat="guitar in ctrl.guitars" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedOpen == guitar.id }" ng-click="ctrl.expandedOpen = guitar.id">
+                <img ng-src="{{ guitar.thumbnail }}" />
+                <div class="hover">
+                  {{ guitar.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div ng-init='ctrl.guitars.push({
+          id: 3,
+          name: "fdsfdsfasdf",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped.png"
+        })'>
+      </div>
+
+      <div class="guitar_img guitars " ng-hide="ctrl.expandedOpen != null || ctrl.videoOpen != null;" ng-click="ctrl.expandedOpen = 3;">
+        <img src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped.png" />
+        <div class="hover">
+          <span>
+          <img class="mini_img" style="display: none" src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+          fdsfdsfasdf          <br/>
+          </span>
+                      <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+                  </div>
+      </div>
+
+      <div class="section video expanded" ng-show="ctrl.videoOpen == 3">
+        <a class="close_icon" ng-click="ctrl.videoOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <br/>
+        <br/>
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="section guitar_expanded 3" ng-show="ctrl.expandedOpen == 3">
+        <a class="close_icon" ng-click="ctrl.expandedOpen = null; ctrl.guitarDescOpen = false">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          <span style="display: none" ng-click="ctrl.guitarDescOpen = !ctrl.guitarDescOpen" class="guitar_description_toggle">
+            <span ng-if="!ctrl.guitarDescOpen">+</span>
+            <span ng-if="ctrl.guitarDescOpen">-</span>
+          </span>
+
+          fdsfdsfasdf        </div>
+        <div class="section_half" ng-hide="ctrl.guitarDescOpen">
+          <img ng-hide="ctrl.gtFlip3" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped.png"/>
+          <img ng-hide="!ctrl.gtFlip3" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped.png"/>
+        </div><div class="section_half guitar_desc" ng-class="{ open: ctrl.guitarDescOpen }">
+          <div class="mini_description description" style="display: none">
+                                  </div>
+          <div class="description" ng-hide="ctrl.desc2Open == 3">
+                      </div>
+          <div class="description" ng-show="ctrl.desc2Open == 3">
+                      </div>
+                    <div class="extry_stuff">
+            <img ng-click="ctrl.gtFlip3 = !ctrl.gtFlip3;" ng-hide="ctrl.gtFlip3" class="back_img" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped.png"/>
+            <img ng-click="ctrl.gtFlip3 = !ctrl.gtFlip3;" ng-hide="!ctrl.gtFlip3" class="back_img" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped.png"/>
+            <div ng-click="ctrl.videoOpen = 3; ctrl.expandedOpen = null" class="video_img" style="background-image: url(http://img.youtube.com/vi//maxresdefault.jpg)">
+              <img style="width: 50px;" src="http://localhost:8888/wp-content/themes/CoyBowles/img/play.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div style="position: relative">
+          <a class="guitar_page prev" ng-click="ctrl.prevGuitarPage();"></a>
+          <a class="guitar_page next" ng-click="ctrl.nextGuitarPage();"></a>
+        </div>
+        <div class="resto_images guitar">
+          <div class="page" ng-style="{ 'left': -100 * ctrl.guitarPage + '%' }">
+            <div ng-repeat="guitar in ctrl.guitars" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedOpen == guitar.id }" ng-click="ctrl.expandedOpen = guitar.id">
+                <img ng-src="{{ guitar.thumbnail }}" />
+                <div class="hover">
+                  {{ guitar.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div ng-init='ctrl.guitars.push({
+          id: 4,
+          name: "fdsfgshsafsg",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2016/02/north-star_220x220_acf_cropped_220x220_acf_cropped.jpg"
+        })'>
+      </div>
+
+      <div class="guitar_img guitars " ng-hide="ctrl.expandedOpen != null || ctrl.videoOpen != null;" ng-click="ctrl.expandedOpen = 4;">
+        <img src="http://localhost:8888/wp-content/uploads/2016/02/north-star_220x220_acf_cropped_220x220_acf_cropped.jpg" />
+        <div class="hover">
+          <span>
+          <img class="mini_img" style="display: none" src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+          fdsfgshsafsg          <br/>
+          </span>
+                      <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/acoustic.png"/>
+                  </div>
+      </div>
+
+      <div class="section video expanded" ng-show="ctrl.videoOpen == 4">
+        <a class="close_icon" ng-click="ctrl.videoOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <br/>
+        <br/>
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="section guitar_expanded 4" ng-show="ctrl.expandedOpen == 4">
+        <a class="close_icon" ng-click="ctrl.expandedOpen = null; ctrl.guitarDescOpen = false">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          <span style="display: none" ng-click="ctrl.guitarDescOpen = !ctrl.guitarDescOpen" class="guitar_description_toggle">
+            <span ng-if="!ctrl.guitarDescOpen">+</span>
+            <span ng-if="ctrl.guitarDescOpen">-</span>
+          </span>
+
+          fdsfgshsafsg        </div>
+        <div class="section_half" ng-hide="ctrl.guitarDescOpen">
+          <img ng-hide="ctrl.gtFlip4" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped.png"/>
+          <img ng-hide="!ctrl.gtFlip4" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped1.png"/>
+        </div><div class="section_half guitar_desc" ng-class="{ open: ctrl.guitarDescOpen }">
+          <div class="mini_description description" style="display: none">
+                                  </div>
+          <div class="description" ng-hide="ctrl.desc2Open == 4">
+                      </div>
+          <div class="description" ng-show="ctrl.desc2Open == 4">
+                      </div>
+                    <div class="extry_stuff">
+            <img ng-click="ctrl.gtFlip4 = !ctrl.gtFlip4;" ng-hide="ctrl.gtFlip4" class="back_img" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped1.png"/>
+            <img ng-click="ctrl.gtFlip4 = !ctrl.gtFlip4;" ng-hide="!ctrl.gtFlip4" class="back_img" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped_220x220_acf_cropped.png"/>
+            <div ng-click="ctrl.videoOpen = 4; ctrl.expandedOpen = null" class="video_img" style="background-image: url(http://img.youtube.com/vi//maxresdefault.jpg)">
+              <img style="width: 50px;" src="http://localhost:8888/wp-content/themes/CoyBowles/img/play.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div style="position: relative">
+          <a class="guitar_page prev" ng-click="ctrl.prevGuitarPage();"></a>
+          <a class="guitar_page next" ng-click="ctrl.nextGuitarPage();"></a>
+        </div>
+        <div class="resto_images guitar">
+          <div class="page" ng-style="{ 'left': -100 * ctrl.guitarPage + '%' }">
+            <div ng-repeat="guitar in ctrl.guitars" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedOpen == guitar.id }" ng-click="ctrl.expandedOpen = guitar.id">
+                <img ng-src="{{ guitar.thumbnail }}" />
+                <div class="hover">
+                  {{ guitar.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div ng-init='ctrl.guitars.push({
+          id: 5,
+          name: "fdsfdsafsdf",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped1_220x220_acf_cropped.png"
+        })'>
+      </div>
+
+      <div class="guitar_img guitars " ng-hide="ctrl.expandedOpen != null || ctrl.videoOpen != null;" ng-click="ctrl.expandedOpen = 5;">
+        <img src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped1_220x220_acf_cropped.png" />
+        <div class="hover">
+          <span>
+          <img class="mini_img" style="display: none" src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+          fdsfdsafsdf          <br/>
+          </span>
+                      <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+                  </div>
+      </div>
+
+      <div class="section video expanded" ng-show="ctrl.videoOpen == 5">
+        <a class="close_icon" ng-click="ctrl.videoOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <br/>
+        <br/>
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="section guitar_expanded 5" ng-show="ctrl.expandedOpen == 5">
+        <a class="close_icon" ng-click="ctrl.expandedOpen = null; ctrl.guitarDescOpen = false">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          <span style="display: none" ng-click="ctrl.guitarDescOpen = !ctrl.guitarDescOpen" class="guitar_description_toggle">
+            <span ng-if="!ctrl.guitarDescOpen">+</span>
+            <span ng-if="ctrl.guitarDescOpen">-</span>
+          </span>
+
+          fdsfdsafsdf        </div>
+        <div class="section_half" ng-hide="ctrl.guitarDescOpen">
+          <img ng-hide="ctrl.gtFlip5" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped.png"/>
+          <img ng-hide="!ctrl.gtFlip5" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped.png"/>
+        </div><div class="section_half guitar_desc" ng-class="{ open: ctrl.guitarDescOpen }">
+          <div class="mini_description description" style="display: none">
+                                  </div>
+          <div class="description" ng-hide="ctrl.desc2Open == 5">
+                      </div>
+          <div class="description" ng-show="ctrl.desc2Open == 5">
+                      </div>
+                    <div class="extry_stuff">
+            <img ng-click="ctrl.gtFlip5 = !ctrl.gtFlip5;" ng-hide="ctrl.gtFlip5" class="back_img" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped.png"/>
+            <img ng-click="ctrl.gtFlip5 = !ctrl.gtFlip5;" ng-hide="!ctrl.gtFlip5" class="back_img" src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped.png"/>
+            <div ng-click="ctrl.videoOpen = 5; ctrl.expandedOpen = null" class="video_img" style="background-image: url(http://img.youtube.com/vi//maxresdefault.jpg)">
+              <img style="width: 50px;" src="http://localhost:8888/wp-content/themes/CoyBowles/img/play.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div style="position: relative">
+          <a class="guitar_page prev" ng-click="ctrl.prevGuitarPage();"></a>
+          <a class="guitar_page next" ng-click="ctrl.nextGuitarPage();"></a>
+        </div>
+        <div class="resto_images guitar">
+          <div class="page" ng-style="{ 'left': -100 * ctrl.guitarPage + '%' }">
+            <div ng-repeat="guitar in ctrl.guitars" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedOpen == guitar.id }" ng-click="ctrl.expandedOpen = guitar.id">
+                <img ng-src="{{ guitar.thumbnail }}" />
+                <div class="hover">
+                  {{ guitar.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div ng-init='ctrl.guitars.push({
+          id: 6,
+          name: "dsffgafsdf",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped1_220x220_acf_cropped1.png"
+        })'>
+      </div>
+
+      <div class="guitar_img guitars " ng-hide="ctrl.expandedOpen != null || ctrl.videoOpen != null;" ng-click="ctrl.expandedOpen = 6;">
+        <img src="http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped1_220x220_acf_cropped1.png" />
+        <div class="hover">
+          <span>
+          <img class="mini_img" style="display: none" src="http://localhost:8888/wp-content/themes/CoyBowles/img/electric.png"/>
+          dsffgafsdf          <br/>
+          </span>
+                      <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/acoustic.png"/>
+                  </div>
+      </div>
+
+      <div class="section video expanded" ng-show="ctrl.videoOpen == 6">
+        <a class="close_icon" ng-click="ctrl.videoOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <br/>
+        <br/>
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="section guitar_expanded 6" ng-show="ctrl.expandedOpen == 6">
+        <a class="close_icon" ng-click="ctrl.expandedOpen = null; ctrl.guitarDescOpen = false">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          <span style="display: none" ng-click="ctrl.guitarDescOpen = !ctrl.guitarDescOpen" class="guitar_description_toggle">
+            <span ng-if="!ctrl.guitarDescOpen">+</span>
+            <span ng-if="ctrl.guitarDescOpen">-</span>
+          </span>
+
+          dsffgafsdf        </div>
+        <div class="section_half" ng-hide="ctrl.guitarDescOpen">
+          <img ng-hide="ctrl.gtFlip6" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-1.png"/>
+          <img ng-hide="!ctrl.gtFlip6" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-21.png"/>
+        </div><div class="section_half guitar_desc" ng-class="{ open: ctrl.guitarDescOpen }">
+          <div class="mini_description description" style="display: none">
+                                  </div>
+          <div class="description" ng-hide="ctrl.desc2Open == 6">
+                      </div>
+          <div class="description" ng-show="ctrl.desc2Open == 6">
+                      </div>
+                    <div class="extry_stuff">
+            <img ng-click="ctrl.gtFlip6 = !ctrl.gtFlip6;" ng-hide="ctrl.gtFlip6" class="back_img" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-21.png"/>
+            <img ng-click="ctrl.gtFlip6 = !ctrl.gtFlip6;" ng-hide="!ctrl.gtFlip6" class="back_img" src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-1.png"/>
+            <div ng-click="ctrl.videoOpen = 6; ctrl.expandedOpen = null" class="video_img" style="background-image: url(http://img.youtube.com/vi//maxresdefault.jpg)">
+              <img style="width: 50px;" src="http://localhost:8888/wp-content/themes/CoyBowles/img/play.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div style="position: relative">
+          <a class="guitar_page prev" ng-click="ctrl.prevGuitarPage();"></a>
+          <a class="guitar_page next" ng-click="ctrl.nextGuitarPage();"></a>
+        </div>
+        <div class="resto_images guitar">
+          <div class="page" ng-style="{ 'left': -100 * ctrl.guitarPage + '%' }">
+            <div ng-repeat="guitar in ctrl.guitars" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedOpen == guitar.id }" ng-click="ctrl.expandedOpen = guitar.id">
+                <img ng-src="{{ guitar.thumbnail }}" />
+                <div class="hover">
+                  {{ guitar.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div style="clear: both;">
+    </div>
+  </div>
+
+
+  <div class="header">
+    AMPS
+  </div>
+  <div class="section guitars amps">
+    <a ng-hide="ctrl.expandedAmpOpen != null;" class="guitar_mini_toggle prev" href="javascript:void(0)" ng-click="ctrl.prevMiniGuitarPage($event)"></a>
+    <a ng-hide="ctrl.expandedAmpOpen != null;" class="guitar_mini_toggle next" href="javascript:void(0)" ng-click="ctrl.nextMiniGuitarPage($event)"></a>
+
+
+              
+      <div ng-init='ctrl.amps.push({
+          id: 1,
+          name: "Amp 1",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2015/12/Untitled-11.png"
+        })'>
+      </div>
+
+      <div class="guitar_img amp current" ng-hide="ctrl.expandedAmpOpen != null" ng-click="ctrl.expandedAmpOpen = 1;">
+        <img src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-11.png" />
+        <div class="hover">
+          Amp 1        </div>
+      </div>
+
+      <div class="section guitar_expanded amp 1" ng-show="ctrl.expandedAmpOpen == 1">
+        <a class="close_icon" ng-click="ctrl.expandedAmpOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          Amp 1        </div>
+
+        <p class="desc">
+          fdlskjf dskflsdkfjlsdkf lskdjf lksdj flksdj fldskjf ldsk        </p>
+        <div class="image">
+          <img src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-11.png" />
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div class="resto_images">
+          <div class="page">
+            <div ng-repeat="amp in ctrl.amps" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedAmpOpen == amp.id }" ng-click="ctrl.expandedAmpOpen = amp.id">
+                <img ng-src="{{ amp.thumbnail }}" />
+                <div class="hover">
+                  {{ amp.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div ng-init='ctrl.amps.push({
+          id: 2,
+          name: "Fuchs Amplifier",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2015/12/Untitled-12.png"
+        })'>
+      </div>
+
+      <div class="guitar_img amp " ng-hide="ctrl.expandedAmpOpen != null" ng-click="ctrl.expandedAmpOpen = 2;">
+        <img src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-12.png" />
+        <div class="hover">
+          Fuchs Amplifier        </div>
+      </div>
+
+      <div class="section guitar_expanded amp 2" ng-show="ctrl.expandedAmpOpen == 2">
+        <a class="close_icon" ng-click="ctrl.expandedAmpOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          Fuchs Amplifier        </div>
+
+        <p class="desc">
+          f lksjdflskdjfldskfj sdlkfjsd lkf lskdjf lkd        </p>
+        <div class="image">
+          <img src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-22.png" />
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div class="resto_images">
+          <div class="page">
+            <div ng-repeat="amp in ctrl.amps" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedAmpOpen == amp.id }" ng-click="ctrl.expandedAmpOpen = amp.id">
+                <img ng-src="{{ amp.thumbnail }}" />
+                <div class="hover">
+                  {{ amp.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div ng-init='ctrl.amps.push({
+          id: 3,
+          name: "Amp 3",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2015/12/Untitled-13.png"
+        })'>
+      </div>
+
+      <div class="guitar_img amp " ng-hide="ctrl.expandedAmpOpen != null" ng-click="ctrl.expandedAmpOpen = 3;">
+        <img src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-13.png" />
+        <div class="hover">
+          Amp 3        </div>
+      </div>
+
+      <div class="section guitar_expanded amp 3" ng-show="ctrl.expandedAmpOpen == 3">
+        <a class="close_icon" ng-click="ctrl.expandedAmpOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          Amp 3        </div>
+
+        <p class="desc">
+          fldksjflskd lksdj flksdjflksdjflksdjflks lksdjf        </p>
+        <div class="image">
+          <img src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-13.png" />
+        </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div class="resto_images">
+          <div class="page">
+            <div ng-repeat="amp in ctrl.amps" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedAmpOpen == amp.id }" ng-click="ctrl.expandedAmpOpen = amp.id">
+                <img ng-src="{{ amp.thumbnail }}" />
+                <div class="hover">
+                  {{ amp.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div style="clear: both;">
+    </div>
+  </div>
+
+  <div class="header">
+    PEDALS
+  </div>
+  <div class="section guitars pedals">
+    <div class="guitar_img pedal" ng-hide="ctrl.expandedPedalOpen != null || ctrl.videoPedalOpen != null" ng-click="ctrl.expandedPedalOpen = 1;">
+      <img src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-32.png" />
+      <div class="hover">
+        Pedals
+      </div>
+    </div>
+              
+      <div ng-init='ctrl.pedals.push({
+          id: 1,
+          name: "Pedal One",
+          thumbnail: "http://localhost:8888/wp-content/uploads/2016/02/Untitled-4_220x220_acf_cropped_220x220_acf_cropped.png"
+        })'>
+      </div>
+
+      <div class="section video expanded" ng-show="ctrl.videoPedalOpen == 1">
+        <a class="close_icon" ng-click="ctrl.videoPedalOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <br/>
+        <br/>
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/fsdffd" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="section guitar_expanded 1" ng-show="ctrl.expandedPedalOpen == 1">
+        <a class="close_icon" ng-click="ctrl.expandedPedalOpen = null;">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/closeButton.png" />
+        </a>
+        <div class="exp_header">
+          Pedal One        </div>
+        <div class="section_half">
+          <img src="http://localhost:8888/wp-content/uploads/2015/12/Untitled-21.png"/>
+        </div><div class="section_half guitar_desc">
+          <div class="description" ng-hide="ctrl.desc2Open == 1">
+            TEstinggggggdsf          </div>
+          <div class="description" ng-show="ctrl.desc2Open == 1">
+            fdsfkj lksd          </div>
+                      <div class="pagin">
+              <span ng-hide="ctrl.desc2Open == 1">1</span><span ng-show="ctrl.desc2Open == 1">2</span>/2
+              <span ng-click="ctrl.desc2Open = null" class="prev"></span>
+              <span ng-click="ctrl.desc2Open = 1" class="next"></span>
+            </div>
+                  </div>
+
+        <div class="divider">
+          <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/guitarDivider.png" />
+        </div>
+
+        <div style="position: relative">
+          <a class="guitar_page prev" ng-click="ctrl.prevPedalPage();"></a>
+          <a class="guitar_page next" ng-click="ctrl.nextPedalPage();"></a>
+        </div>
+        <div class="resto_images pedal">
+          <div class="page" ng-style="{ 'left': -100 * ctrl.pedalPage + '%' }">
+            <div ng-repeat="pedal in ctrl.pedals" class="section_quarter">
+              <div class="mini_guitar" ng-class="{ selected: ctrl.expandedPedalOpen == pedal.id }" ng-click="ctrl.expandedPedalOpen = pedal.id">
+                <img ng-src="{{ pedal.thumbnail }}" />
+                <div class="hover">
+                  {{ pedal.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div style="clear: both;">
+    </div>
+  </div>
+
+  <div class="header">
+    SPONSORS
+  </div>
+  <div class="section sponsors">
+          <a target="_blank" href="http://andrewsamplab.com/andrewsamps-wp/"><img src="http://localhost:8888/wp-content/uploads/2015/12/AAAAAAALogo.png" /></a>
+          <a target="_blank" href="http://www.ibanez.com/usa/"><img src="http://localhost:8888/wp-content/uploads/2015/12/AAAAAAALogo1.png" /></a>
+          <a target="_blank" href="http://daddario.com/daddariosplash.page"><img src="http://localhost:8888/wp-content/uploads/2015/12/AAAAAAALogo2.png" /></a>
+          <a target="_blank" href="http://fredkellypicks.com/"><img src="http://localhost:8888/wp-content/uploads/2015/12/AAAAAAALogo3.png" /></a>
+      </div>
+</div>
+
+    <footer>
+      For questions reach out to: <a href="mailto:info@coybowles.com">info@coybowles.com</a>
+      <br/>
+      All content is © 2016 Coy Bowles designed by <a href="http://southernground.com">Southern Ground.</a>
+      <br/>
+      <br/>
+      <img src="http://localhost:8888/wp-content/themes/CoyBowles/img/footer.png" />
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+- rollover states for home page
+  - titles
+  - video play icons
+- blog stuff
+- x icon, prev/next icons
+- nav collapsing

@@ -1,0 +1,2432 @@
+/*
+Theme Name: Coy Bowles
+Version: 1.0
+*/
+
+
+@font-face {
+    font-family: 'selfie_blackregular';
+    src: url('lian_types_-_selfieblack-webfont.eot');
+    src: url('lian_types_-_selfieblack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lian_types_-_selfieblack-webfont.woff2') format('woff2'),
+         url('lian_types_-_selfieblack-webfont.woff') format('woff'),
+         url('lian_types_-_selfieblack-webfont.ttf') format('truetype'),
+         url('lian_types_-_selfieblack-webfont.svg#selfie_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+body {
+  background-color: #161721;
+  font-family: 'Oswald', sans-serif;
+  color: #efdab1;
+  margin: 0;
+}
+
+body, p {
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #af8a3b;
+}
+
+a:hover, a:active, a:focus {
+  opacity: 0.8;
+}
+
+.container {
+  background-image: url(img/hero.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.container.music {
+  background-image: url(img/heroMusic.png);
+
+}
+
+.container.gear {
+  background-image: url(img/heroGear.png);
+
+}
+
+.container.books {
+  background-image: url(img/heroBooks.jpg);
+
+}
+
+.container.about {
+  background-image: url(img/heroAbout.png);
+
+}
+
+.container.blog {
+  background-image: none;
+  padding-top: 150px;
+  max-width: 1230px;
+}
+
+.container.blog .social {
+  display: none;
+}
+
+.container.blog.tour .social, .container.blog.gallery .social  {
+  display: block;
+  top: 20px;
+}
+
+.container.blog.tour .nav_stuff .social, .container.blog.gallery .nav_stuff .social {
+  display: none;
+}
+
+/* NAVIGATION */
+.nav {
+  width: 190px;
+  background: #212b44;
+  border-top: 4px solid #af8a3c;
+  border-bottom: 4px solid #af8a3c;
+  text-align: center;
+  position: fixed;
+  top: 25px;
+  left: 0;
+  padding-bottom: 20px;
+  z-index: 11000;
+
+  -webkit-transition: top 0.2s ease-in-out;
+  -moz-transition: top 0.2s ease-in-out;
+  -o-transition: top 0.2s ease-in-out;
+  -ms-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+
+  -webkit-transition: left 0.2s ease-in-out;
+  -moz-transition: left 0.2s ease-in-out;
+  -o-transition: left 0.2s ease-in-out;
+  -ms-transition: left 0.2s ease-in-out;
+  transition: left 0.2s ease-in-out;
+}
+
+.nav .social {
+  display: none;
+}
+
+.nav img {
+  vertical-align: inherit;
+}
+
+.nav.collapsed {
+  top: -20px;
+  background: transparent;
+  height: auto;
+  border-color: transparent;
+  bottom: auto;
+  padding-bottom: 0;
+}
+
+.nav.collapsed .nav_stuff {
+  display: none;
+}
+
+.nav.collapsed .collapse {
+  right: -15px;
+  background-image: url(img/navExpand.png);
+}
+
+.nav .logo {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.nav a {
+  display: block;
+  font-size: 15px;
+}
+
+.nav a:hover {
+  color: #efdab1;
+  opacity: 1;
+}
+
+.nav a:not(.logo), .nav a:not(.contact_link) {
+  position: relative;
+  top: 5px;
+}
+
+.nav a.contact_link {
+  font-weight: lighter;
+}
+
+.nav .collapse {
+  position: absolute;
+  right: -40px;
+  top: 61px;
+  display: block;
+  height: 46px;
+  width: 40px;
+  cursor: pointer;
+  background-image: url(img/navCollapse.png);
+  z-index: 1000;
+}
+
+/* HERO */
+
+.hero {
+  padding: 30px 0;
+  width: 100%;
+  height: 590px;
+}
+
+.social {
+  position: absolute;
+  right: 0;
+}
+
+.social a {
+  margin-right: 10px;
+  background-image: url(img/social.png);
+  width: 26px;
+  height: 27px;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.social a:hover {
+  opacity: 1.0;
+}
+
+.social .yt {
+  background-position: -37px;
+}
+
+.social .tw {
+  background-position: -74px;
+}
+.social .ig {
+  margin-right: 30px;
+  background-position: -111px;
+}
+
+/* SECTIONS */
+
+.section {
+  width: 880px;
+  margin: 0 auto 60px;
+  overflow: hidden;
+  background: #212b44;
+  border-top: 3px solid #af8a3c;
+  border-bottom: 3px solid #af8a3c;
+}
+
+.section .expandable {
+  padding: 40px;
+  position: relative;
+}
+
+.section .expandable .close-icon {
+  position: absolute;
+  top: -5px;
+  cursor: pointer;
+  right: 10px;
+}
+
+.section .expandable .button {
+  font-size: 20px;
+}
+
+.section.expanding {
+  height: auto;
+  position: relative;
+}
+
+.section .section_half {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.section .section_half img.exp {
+  cursor: pointer;
+  width: 100%;
+}
+
+.section .section_half .exp {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 60%;
+}
+
+.section_half .playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -19px;
+  cursor: pointer;
+}
+
+.section_half.text, .section .expandable {
+  padding: 40px;
+  font-size: 20px;
+  color: #ede4d7;
+}
+
+.section .expandable p {
+  margin-bottom: 0;
+}
+
+.section_half.text p {
+  margin: 0;
+  margin-top: 20px;
+}
+
+.section_quarter {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+/* Feed Section */
+
+.feed_tabs {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+  line-height: 50px;
+  font-family: 'selfie_blackregular';
+}
+
+.feed_tabs a {
+  font-size: 42px;
+  color: white;
+  padding: 5px 7px;
+  margin-left: 2px;
+  text-shadow: 3px 3px 2px rgba(0,0,0,0.6);
+}
+
+.feed_tabs img {
+  margin: 0 10px;
+  vertical-align: sub;
+}
+
+.feed_tabs a:hover, .feed_tabs a.active {
+  opacity: 1;
+  color: #eedbb2;
+}
+
+.section.feed {
+  height: 270px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.feed_wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 880px;
+}
+
+.feed_wrapper .page_link {
+  position: absolute;
+  display: block;
+  height: 50px;
+  width: 27px;
+  font-size: 20px;
+  left: -40px;
+  bottom: 100px;
+  cursor: pointer;
+  background-image: url(img/pageArrow.png);
+  z-index: 2500;
+}
+
+.feed_wrapper.expanded .page_link {
+  bottom: 65px;
+}
+
+.feed_wrapper .page_link:hover {
+  opacity: 0.8;
+}
+
+.feed_wrapper .page_link.next {
+  left: auto;
+  right: -40px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.section .page {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.section.feed .video {
+  cursor: pointer;
+}
+
+.section_half.blog {
+  margin-right: -3px;
+}
+
+.section_half.blog, .section_half.video {
+  height: 270px;
+  white-space: normal;
+  text-align: center;
+  font-size: 28px;
+  padding: 85px 5px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.section_quarter.video {
+  height: 170px;
+  white-space: normal;
+  text-align: center;
+  font-size: 18px;
+  padding: 35px 5px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.section.feed .video:before, .section.feed .blog:before {
+  content: "";
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(175,138,60, 0.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.section.feed .video:hover:before, .section.feed .blog:hover:before {
+  background-color: rgba(175,138,60, 0.7);
+}
+
+.section.feed p {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+.section.feed .video img {
+  margin-top: 30px;
+  position: relative;
+  z-index: 1000;
+}
+
+.section.feed .video:hover img {
+  display: none;
+}
+
+.section.feed .blog p, .section.feed .video p {
+  position: relative;
+  z-index: 1000;
+  opacity: 0;
+  color: white;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.section.feed .blog:hover p, .section.feed .video:hover p {
+  opacity: 1;
+}
+
+.section.feed .mini_feed .video p {
+  font-size: 18px;
+}
+
+.section.feed.expanded {
+  height: auto;
+}
+
+.section.feed.expanded .mini_feed {
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 170px;
+}
+
+.close_icon {
+  position: relative;
+  z-index: 1000;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.close_icon:hover {
+  opacity: 0.8;
+}
+
+.section.feed.expanded iframe {
+  border: none;
+  padding: 40px;
+}
+
+/* Facebook Feed */
+.section_half.facebook {
+  height: 270px;
+  text-align: center;
+  font-size: 20px;
+  padding: 40px 5px 0;
+  background: #af8a3c;
+}
+
+.section_half.facebook p {
+  position: relative;
+  z-index: 100;
+  white-space: initial;
+  color: white;
+}
+
+.section_half.facebook .facebook_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.section_half.facebook:hover {
+  cursor: pointer;
+}
+
+.section_half.facebook:hover .facebook_bg {
+  opacity: 0.35;
+}
+
+.section_half.facebook a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Blog Feed */
+.section_half.blog a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+.hero_blog {
+  height: auto;
+}
+
+.hero_blog.tour, .hero_blog.gallery {
+  padding: 0;
+}
+
+.hero_blog .hero_header {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 80px;
+  left: 480px;
+}
+
+
+/* BOOKS PAGE */
+.books_page .retail_link {
+  vertical-align: middle;
+  width: 120px !important;
+  margin-left: 10px;
+}
+
+.books_page .blogs .section_half {
+  display: inline-block;
+}
+
+.books_page .blogs .post_link span {
+  display: inline-block;
+  margin-top: 35%;
+}
+
+.books_page .blogs .post_link {
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: rgba(175, 138, 60, 0.7);
+  opacity: 0;
+  font-family: 'Oswald';
+  color: white;
+  font-size: 28px;
+}
+
+.books_page .blogs .post_link:hover {
+  opacity: 1;
+}
+
+.books_page .blogs .section_half.img_section {
+  padding-bottom: 40%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.books_page .bio, .blog_bio {
+  color: white;
+  font-size: 15px;
+  line-height: 20px;
+  background: transparent;
+  font-family: 'PT Sans';
+}
+
+.books_page .bio p, .blog_bio p {
+  margin: 30px;
+}
+
+.books_page .bio img, .blog_bio img {
+  float: left;
+  margin: 30px;
+  width: 215px;
+}
+
+.books_page .bio .sig {
+  font-family: 'selfie_blackregular';
+  font-size: 26px;
+  color: #eee5d7;
+  position: relative;
+  top: 7px;
+  left: 5px;
+  display: inline-block;
+}
+
+.books_page .section {
+  height: auto;
+  font-family: 'PT Sans';
+}
+
+.books_page .section_half {
+  text-align: center;
+  font-size: 14px;
+  display: table-cell;
+}
+
+.books_page .section_half img {
+  width: 100%;
+}
+
+.books_page .main_title {
+  margin: 30px 20px 10px;
+  font-size: 60px;
+  line-height: 60px;
+  font-family: 'selfie_blackregular';
+}
+
+.books_page .sub_title {
+  line-height: 25px;
+  font-size: 26px;
+  color: #faefe4;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+}
+
+.books_page .authors {
+  color: #766348;
+  font-weight: bold;
+  margin-top: 15px;
+  line-height: 16px;
+}
+
+.books_page .description {
+  color: white;
+  text-align: left;
+  padding: 30px;
+  line-height: 16px;
+}
+
+.books_page .button {
+  margin-bottom: 15px;
+}
+
+.button_wrap {
+  text-align: left;
+}
+
+.button {
+  font-family: 'PT Sans';
+  padding: 7px;
+  color: white;
+  border: 2px solid white;
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: white;
+  color: #212b44;
+  opacity: 1;
+}
+
+.books_page .extra_image {
+  float: left;
+  width: 50%;
+}
+
+/* GEAR */
+.gear_page .header {
+  text-align: center;
+  font-size: 40px;
+  color: #b68f43;
+}
+
+.section.guitars {
+  position: relative;
+  overflow: visible;
+  height: auto;
+  padding: 0;
+}
+
+.section.guitars .guitar_img {
+  width: 25%;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.section.guitars.amps .desc {
+  color: white;
+  font-family: 'PT Sans';
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.section.guitars .guitar_img.amp {
+  width: 33.33%;
+}
+
+.section.guitars .guitar_img img {
+  width: 100%;
+}
+
+.section.guitars .guitar_img .hover img:not(.mini_img) {
+  display: none;
+  width: auto;
+  height: 32px;
+  margin: 10px auto;
+}
+
+.section.guitars .guitar_img .hover {
+  padding: 0 20px;
+  position: absolute;
+  font-family: 'PT Sans';
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  font-size: 0;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0 0 2vw 0 rgba(0,0,0,0.6);
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section.guitars .guitar_img:hover .hover {
+  background-color: rgba(33, 43, 64, 0.8);
+  font-size: 18px;
+}
+
+.section.guitars .guitar_img:hover .hover img, .section.guitars .guitar_img:hover .hover .subtext {
+  display: block;
+}
+
+.section.guitars .guitar_img .hover .subtext {
+  display: none;
+  font-size: 14px;
+}
+
+.section.guitars .guitar_expanded {
+  border: none;
+  margin: 0;
+  height: auto;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  z-index: 2000;
+}
+
+.section.guitars .guitar_expanded img {
+  width: 100%;
+}
+
+.section.guitars .pagin {
+  text-align: right;
+  color: #efdab1;
+  font-family: 'PT Sans Narrow';
+  margin-top: -30px;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.section.guitars .pagin .next, .section.guitars .pagin .prev {
+  display: inline-block;
+  width: 8px;
+  vertical-align: middle;
+  height: 16px;
+  margin-top: -4px;
+  background-size: contain;
+  background-image: url(img/pageArrow.png);
+}
+
+.section.guitars .pagin .next {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.section.guitars .pagin .next:hover, .section.guitars .pagin .prev:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.section.guitars .video.expanded {
+  margin: 0;
+  border: none;
+  height: auto;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  padding: 2vw 2.8vw;
+  z-index: 2000;
+}
+
+.section.guitars .guitar_expanded.amp .image img{
+  width: 100%;
+}
+
+.section.guitars .guitar_expanded .description {
+  padding: 0 0 30px 40px;
+  color: white;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'PT Sans Narrow';
+  height: 412px;
+}
+
+.section.guitars .guitar_expanded .video_img {
+  width: 245px;
+  height: 203px;
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  vertical-align: top;
+  text-align: center;
+  float: right;
+  cursor: pointer;
+}
+
+.section.guitars .guitar_expanded .video_img img {
+  margin-top: 80px;
+}
+
+
+.section.guitars .guitar_expanded .exp_header {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.section.guitars .video.expanded .close_icon, .section.guitars .guitar_expanded .close_icon {
+  margin: 0;
+}
+
+.section.guitars .guitar_expanded .extry_stuff {
+  padding-left: 15px;
+}
+
+.section.guitars .guitar_expanded .extry_stuff .back_img {
+  width: 135px;
+  cursor: pointer;
+}
+
+.section.guitars .guitar_expanded .resto_images {
+  position: relative;
+  overflow: hidden;
+  height: 145px;
+  margin: 0 47px;
+}
+
+.section.guitars .guitar_expanded .resto_images .section_quarter {
+  height: 135px;
+  width: 135px;
+  margin: 5px;
+}
+
+.section.guitars .guitar_expanded .resto_images .mini_guitar {
+  padding-bottom: 100%;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.section.guitars .guitar_expanded .resto_images .section_quarter img {
+  width: 100%;
+}
+
+.section.guitars .guitar_expanded .resto_images .mini_guitar.selected {
+  outline: 3px solid #AF8A3C;
+  background-color: #AF8A3C;
+}
+
+.section.guitars .guitar_expanded .resto_images .mini_guitar .hover {
+  display: none;
+  padding: 0 10px;
+  white-space: normal;
+  font-size: 18px;
+}
+
+.section.guitars .guitar_expanded .resto_images .mini_guitar:hover:before {
+  content: "";
+  background: #AF8A3C;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  z-index: 1000;
+}
+
+.section.guitars .guitar_expanded .resto_images .mini_guitar:hover .hover {
+  position: absolute;
+  z-index: 1050;
+  left: 0;
+  top: 50px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-family: 'PT Sans Narrow';
+}
+
+.section.guitars .guitar_expanded .divider {
+  text-align: center;
+  padding: 40px 0 35px;
+}
+
+.section.guitars .guitar_expanded .guitar_page {
+  position: absolute;
+  display: block;
+  height: 50px;
+  width: 27px;
+  left: -15px;
+  top: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  background-image: url(img/pageArrow.png);
+}
+
+.section.guitars .guitar_expanded .guitar_page.next {
+  left: auto;
+  right: -15px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.section.guitars.pedals .guitar_expanded .extry_stuff {
+  padding-left: 40px;
+}
+
+.section.guitars.pedals .guitar_expanded .extry_stuff .video_img {
+  float: none;
+  width: 100%;
+}
+
+.section.pedals, .section.sponsors {
+  height: auto;
+}
+
+.section.sponsors {
+  background-color: white;
+  text-align: center;
+}
+
+.section.sponsors img {
+  width: 100%;
+}
+
+.section.sponsors a {
+  width: 24%;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.section.pedals .guitar_img.pedal {
+  width: 100%;
+}
+
+/* MUSIC */
+.section.transparent {
+  background: transparent;
+  border: none;
+  height: auto;
+}
+
+.music_page .lil_divider {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -52px;
+}
+
+.music_page .button {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.music_page .button_wrapper {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.music_page .section.zbb {
+  height: auto;
+}
+
+.music_page .section_half.white {
+  color: #212b44;
+  background-color: #eee5d7;
+}
+
+.music_page .section_half {
+  padding: 20px 40px 40px;
+  text-align: center;
+  display: table-cell;
+}
+
+.music_page .section.zbb h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.music_page .section.zbb p {
+  text-align: left;
+  font-family: 'PT Sans';
+  font-size: 15px;
+}
+
+.music_page .section.zbb h3 {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #efdab1;
+  font-family: 'PT Sans';
+  font-style: italic;
+}
+
+.music_page .section.zbb table {
+  margin-top: 30px;
+}
+
+.music_page .section.zbb h4 {
+  font-family: 'PT Sans Narrow';
+  font-weight: bold;
+  margin: 0;
+  color: #efdab1;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.music_page .performer {
+  display: inline-block;
+  float: left;
+  width: 33.333%;
+  font-style: italic;
+}
+
+.music_page .music_list img {
+  width: 95px;
+}
+
+.music_page .section.zbb td {
+  padding: 10px;
+  vertical-align: top;
+  color: white;
+  text-align: left;
+}
+
+.music_page .section.zbb td p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.music_page .section.lessons h4 {
+  font-weight: 400;
+  font-family: 'Oswald';
+  font-size: 24px;
+  color: #b8974f;
+}
+
+.music_page .section.lessons a:not(.button) {
+  font-family: 'PT Sans';
+  font-size: 15px;
+  color: #efdab1;
+}
+
+.music_page p.fellowship_sub {
+  font-family: 'selfie_blackregular' !important;
+  font-size: 35px !important;
+  margin: 0;
+  margin-top: -20px;
+  text-align: center !important;
+}
+
+/* BLOG */
+
+.blog_page {
+  margin-left: 35px;
+  width: 72%;
+}
+
+.archives {
+  float: right;
+  width: 20%;
+  padding-bottom: 20px;
+}
+
+.archives h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+
+.archives h3 a {
+  color: white;
+}
+
+.archives h3 a:hover {
+  color: #efd7b1;
+}
+
+
+.archives li {
+  list-style-type: none;
+  line-height: 25px;
+}
+
+.archives li a {
+  font-family: 'PT Sans';
+  color: white;
+}
+
+.archives .bio_img {
+  width: 100%;
+  border: 2px solid #af8a3c;
+}
+
+.archives .line_spacer {
+  height: 1px;
+  background-color: #af8a3c;
+  width: 80px;
+  margin: 30px 0;
+}
+
+.archives .bio_text {
+  margin-top: 20px;
+  font-size: 13px;
+  color: white;
+  font-family: 'PT Sans';
+}
+
+.archives .social {
+  display: block !important;
+  position: static;
+  margin-top: 22px;
+}
+
+.blog_page .section {
+  width: 100%;
+  height: auto;
+}
+
+.blog_page .section .content, .blog_page .section .content p {
+  color: white;
+}
+
+.blog_page .section .hero_img_wrapper {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.blog_page.posts .hero_img_wrapper {
+  max-height: none;
+}
+
+.blog_page .section .hero_img {
+  width: 100%;
+}
+
+.blog_page .section {
+  padding: 35px 50px 20px;
+}
+
+.blog_page .section h2 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  margin: 0;
+}
+
+.blog_page .section p {
+  font-family: 'PT Sans';
+  color: #efdab1;
+}
+
+/* ABOUT */
+.about_page .section {
+  height: auto;
+}
+
+.about_page .section_half img.about_big {
+  width: 100%;
+}
+
+.about_page h2 {
+  color: #efdab1;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.about_page p {
+  font-family: 'PT Sans';
+  color: white;
+  padding: 0 40px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.about_page .influences .header {
+  font-family: 'selfie_blackregular';
+  color: #efdab1;
+  font-size: 63px;
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.about_page .hilite {
+  color: #efdab1;
+  text-transform: uppercase;
+}
+
+.about_page .influences {
+  position: absolute;
+  font-size: 14px;
+  bottom: 10px;
+  left: 0;
+}
+
+.about_page .section {
+  position: relative;
+}
+
+.about_page .section .musical_descrip {
+  height: 470px;
+  overflow: hidden;
+}
+
+.about_page .section .expanded {
+  position: absolute;
+  height: auto;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  padding-bottom: 20px;
+}
+
+.about_page .section .expanded .section_half {
+  float: left;
+}
+
+.about_page .section .readmore {
+  height: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  vertical-align: sub;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.about_page .section .expanded .close_icon {
+  margin-top: 20px;
+}
+
+.about_page .button {
+  font-size: 16px;
+  padding: 9px;
+  margin-left: 0;
+}
+
+.about_page .button_wrap {
+  padding-left: 40px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+/* TOUR */
+.scroll-container {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-container iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.scroll-container {
+  height: 450px;
+  width: 100%;
+  overflow: scroll;
+}
+
+.section.tour {
+  height: auto;
+  margin-top: 50px;
+  padding: 10px 40px 40px;
+}
+
+.section.tour h1 {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.section.tour .close_icon {
+  margin-right: -20px ;
+}
+
+.section.tour table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.section.tour .tour_date {
+  color: #af8a3c;
+  font-family: 'PT Sans';
+  font-size: 22px;
+}
+
+.section.tour .tour_date td {
+  padding: 23px 0;
+  border-bottom: 1px solid #d4c3a2;
+}
+
+.section.tour .tour_date .button {
+  font-size: 15px;
+  padding: 7px 10px;
+  border-color: #e6d2ac;
+  color: #e6d2ac;
+}
+
+.section.tour .tour_date .button:hover {
+  background-color: #e6d2ac;
+  color: #212B44;
+}
+
+.section.tour .tour_date .title {
+  text-transform: uppercase;
+}
+
+.hero_blog.tour .hero_header, .hero_blog.gallery .hero_header {
+  left: 50%;
+  margin-left: -223px;
+}
+
+/* GALLERY */
+.section.gallery {
+  height: auto;
+  margin-top: 50px;
+  padding: 0 40px 40px;
+}
+
+.section.gallery h1 {
+  font-weight: 400;
+  margin-bottom: 25px;
+  margin-top: 60px;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+
+.ngg-gallery-thumbnail a img {
+  width: 126px;
+  height: 126px;
+  margin: 2px 0 2px 2px;
+  border: none;
+  padding: 0;
+}
+
+.ngg-gallery-thumbnail a:hover img {
+  outline: 2px solid #b08b3c;
+}
+
+.ngg-gallery-thumbnail a {
+  position: relative;
+  display: inline-block;
+}
+
+.ngg-gallery-thumbnail a:hover:before {
+  content: "";
+  background: white;
+  width: 2px;
+  height: 25px;
+  left: 50%;
+  top: 50%;
+  margin-left: -1px;
+  margin-top: -12.5px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+}
+
+.ngg-gallery-thumbnail a:hover:after {
+  content: "";
+  background: white;
+  width: 25px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -12.5px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+}
+
+#fancybox-left, #fancybox-right {
+  visibility: visible !important;
+}
+
+#fancybox-right span, #fancybox-left span {
+  background-image: url(img/pageArrow.png) !important;
+  background-size: 100% !important;
+  background-position: center;
+  height: 50px;
+  width: 27px;
+}
+
+#fancybox-right span {
+  left: auto;
+  right: -60px !important;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#fancybox-left span {
+  right: auto;
+  left: -60px !important;
+}
+
+#fancybox-close {
+  background-image: url(img/closeButton.png) !important;
+  background-size: 100% !important;
+  background-position: center !important;
+  top: -15px !important;
+  right: -15px !important;
+}
+
+/* FOOTER */
+footer {
+  font-family: 'PT Sans';
+  margin-bottom: 220px;
+  text-align: center;
+}
+
+.section.writing .section_half {
+  display: table-cell;
+}
+
+.section.writing .img_section {
+  padding-bottom: 50%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@media only screen and (max-device-width: 992px) {
+  .about_page .button_wrap {
+    padding-left: 40px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .music_page .section.zbb h3 {
+    font-size: 30px;
+  }
+
+  .section.feed.expanded > p {
+    height: 40px;
+  }
+
+  .about_page .close_icon {
+    zoom: 2;
+    top: 10px;
+  }
+
+  .section.feed.expanded .close_icon {
+    zoom: 2;
+  }
+  .nav a {
+    font-size: 35px;
+  }
+
+  .nav a.contact_link {
+    font-size: 20px;
+  }
+
+  footer {
+    font-size: 25px;
+  }
+
+  .section.writing .section_half {
+    display: inline-block;
+  }
+
+  .books_page .titles, .about_page .influences .header {
+    zoom: 1.5;
+  }
+
+  .blog_page .section h2 {
+    font-size: 50px;
+  }
+
+  .section.tour h1 {
+    font-size: 45px;
+  }
+
+  .music_page .section.zbb h2, .gear_page .header, .about_page h2 {
+    font-size: 70px;
+  }
+
+  .music_page p.fellowship_sub {
+    font-size: 60px !important;
+    margin-top: -10px;
+  }
+
+  .container.blog .nav .social {
+    display: block;
+  }
+
+  .books_page .blogs .section_half.img_section, .section.writing .section_half.img_section {
+    padding-bottom: 100%;
+  }
+
+  .blog_bio {
+    display: block !important;
+  }
+
+  .archives {
+    width: 21%;
+  }
+
+  .archives li {
+    font-size: 2.7vw;
+    margin-top: 18px;
+  }
+
+  .archives .bio_stuff, .archives .social_stuff {
+    display: none;
+  }
+
+  .archives h3 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .section.feed .blog p, .section.feed .video p {
+    z-index: 5000;
+  }
+
+  .books_page .retail_link {
+    width: 170px !important;
+  }
+
+  .section.guitars .guitar_expanded .button_wrap, .section.guitars .video.expanded .button_wrap {
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    padding: 0 25px;
+    z-index: 100;
+  }
+
+  .section.guitars .guitar_expanded .button, .section.guitars .video.expanded .button {
+    zoom: 2 !important;
+    margin-left: 10px;
+    display: inline-block;
+    border-color: #212b44;
+    color: #212b44;
+  }
+
+  .section.guitars .guitar_expanded .button:hover, .section.guitars .video.expanded .button:hover {
+    background-color: #212b44;
+    color: white;
+    opacity: 1;
+  }
+
+  .section.guitars .guitar_expanded .button.toggle_off, .section.guitars .video.expanded .button.toggle_off {
+    font-size: 16px;
+    color: white;
+    border-color: white;
+    margin-right: 15px;
+  }
+
+  .section.guitars .guitar_expanded .button.toggle_off:hover, .section.guitars .video.expanded .button.toggle_off:hover {
+    background-color: white;
+    color: #212b44;
+  }
+
+  .section.guitars .guitar_expanded .primary_img, .section.guitars .guitar_expanded .secondary_img {
+    width: 49%;
+    display: inline-block !important;
+  }
+
+
+  .section.feed, .section.feed .section_half.video, .section.feed .section_half.blog, .section.feed .section_half.facebook {
+    height: 400px;
+  }
+
+  .hero.hero_blog {
+    height: auto;
+    padding-bottom: 0;
+    padding-top: 260px;
+  }
+
+  .hero_blog .hero_header {
+    width: 90%;
+  }
+
+  .section.tour {
+    margin-top: 10px;
+  }
+
+  .music_page .button_wrapper {
+    height: 60px;
+  }
+
+  .influences {
+    width: 100%;
+  }
+
+  .about_page p, .influences, .books_page p, .books_page .description, .music_page p, .blog_page p, .blog_bio {
+    font-size: 30px !important;
+    line-height: 34px;
+  }
+
+  .archives {
+    padding-right: 20px;
+  }
+
+  .archives .bio_text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .about_page .section .readmore {
+    height: 36px;
+  }
+
+  .button {
+    margin-left: 10px;
+  }
+
+  .button_wrap {
+    margin-top: 20px;
+    height: 100px;
+  }
+
+  .books_page .bio .sig {
+    font-size: 50px;
+  }
+
+  .music_page .section_half {
+    overflow: hidden;
+  }
+
+  .music_page .performer {
+    font-size: 30px;
+  }
+
+  .music_page .music_list {
+    margin: 0 auto;
+  }
+
+  .music_page .section.zbb h4 {
+    font-size: 50px;
+  }
+
+  .music_page .section.lessons a:not(.button){
+    font-size: 25px;
+  }
+
+  .music_page .music_list img {
+    width: 135px;
+  }
+
+  .section.guitars .guitar_expanded .resto_images {
+    height: 295px;
+  }
+
+  .section.guitars .guitar_expanded .resto_images .section_quarter {
+    padding-bottom: 32.2%;
+    width: 32.2%;
+  }
+
+  .nav {
+    position: absolute;
+    top: 10px;
+  }
+
+  .nav.collapsed {
+    top: 10px;
+  }
+
+  .feed_tabs {
+    zoom: 2.3;
+  }
+
+  .feed_wrapper, .section {
+    width: 100%;
+  }
+
+  .feed_wrapper .page_link {
+    background-repeat: no-repeat;
+    height: 100%;
+    top: 0;
+    width: 120px;
+    background-position: center;
+    background-color: rgba(22,23,33, 0.3);
+  }
+
+  .feed_wrapper .page_link.next {
+    right: 0;
+  }
+
+  .feed_wrapper .page_link.prev {
+    left: 0;
+  }
+
+  .feed_wrapper.expanded .page_link {
+    height: 170px;
+    top: auto;
+    bottom: 0 !important;
+  }
+
+  .section.guitars .guitar_expanded .guitar_page {
+    padding-bottom: 32%;
+    width: 60px;
+    left: -30px;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .section.guitars .guitar_expanded .guitar_page.next {
+    right: -30px;
+  }
+
+  .section_half.text, .section .expandable {
+    padding: 30px 35px;
+  }
+
+  .section.feed .video:before {
+    background-color: rgba(175,138,60, 0.5);
+  }
+
+  .section.feed .video:not(.section_quarter):before {
+    background-image: url(img/play.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+  }
+
+  .section.feed .blog p, .section.feed .video p {
+    opacity: 1;
+  }
+
+  .section.feed .video img {
+    display: none;
+  }
+
+  .section.feed .video img.mini {
+    display: block !important;
+  }
+
+  .container.blog {
+    padding-top: 0;
+  }
+
+  .hero_blog {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .hero_blog .hero_header {
+    position: static;
+  }
+
+  .divider {
+    max-width: 100%;
+  }
+
+  .container.about .section img:not(.divider):not(.readmore) {
+    width: 100%;
+  }
+
+  .about_page h2 {
+    margin-top: 10px;
+  }
+
+  .gear_page .exp_header {
+    font-size: 35px !important;
+  }
+
+  .gear_page .close_icon {
+    zoom: 2;
+  }
+
+  .gear_page .close_icon {
+    margin-top: -7px;
+  }
+
+  .gear_page .extry_stuff {
+    display: none;
+  }
+
+  .gear_page .guitar_expanded .description {
+    height: 520px;
+  }
+
+  .section.guitars .guitar_expanded .resto_images .mini_guitar:before {
+    content: "";
+    background: #AF8A3C;
+    width: 100%;
+    padding-bottom: 100%;
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 1000;
+  }
+
+  .section.guitars .guitar_expanded .resto_images .mini_guitar .hover {
+    position: absolute;
+    z-index: 1050;
+    left: 0;
+    top: 90px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 32px !important;
+    line-height: 32px;
+    color: #fff;
+    font-family: 'PT Sans Narrow';
+  }
+
+  .section.guitars .guitar_img .hover {
+    background-color: rgba(33, 43, 64, 0.8);
+    font-size: 40px;
+  }
+
+  .section.guitars .guitar_img .hover .subtext {
+    display: block;
+  }
+
+  .section.guitars .guitar_img:hover .hover img {
+    display: none !important;
+  }
+
+  .section.guitars .guitar_expanded .resto_images {
+    margin: 0 20px;
+  }
+
+  .section.guitars .guitar_desc.open .mini_description, .section.guitars.amps .desc {
+    font-size: 30px;
+    line-height: 34px;
+    height: auto;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .hero_blog.tour .hero_header, .hero_blog.gallery .hero_header {
+    left: auto;
+    margin-left: 0;
+  }
+
+  .section.gallery {
+    width: 100%;
+  }
+
+  .fancy-ico, #fancybox-close {
+    zoom: 2;
+  }
+
+  #fancybox-right span {
+    right: -35px !important;
+  }
+
+  #fancybox-left span {
+    left: -35px !important;
+  }
+
+  .ngg-galleryoverview {
+    text-align: center;
+  }
+
+  .ngg-gallery-thumbnail-box {
+    float: none !important;
+    display: inline-block !important;
+    width: 32%;
+  }
+
+  .ngg-gallery-thumbnail, .ngg-gallery-thumbnail a {
+    float: none !important;
+    width: 100%;
+  }
+
+  .ngg-gallery-thumbnail a img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bookend {
+    display: none;
+  }
+
+  .nav .logo {
+    margin-top: 5px;
+  }
+
+  .hero .social {
+    display: none;
+  }
+
+  .nav .social {
+    display: block;
+    position: static;
+    margin-top: 10px;
+  }
+
+  .nav .social a {
+    margin: 0 4px !important;
+  }
+
+  .nav {
+    top: 0px;
+    zoom: 2.5;
+  }
+
+  .nav.collapsed {
+    top: 0px;
+    left: -10px;
+  }
+
+  .nav .collapse {
+    top: 36px;
+  }
+
+  .section .section_half {
+    width: 100%;
+  }
+
+  .container.home_page .section_half.text {
+    display: none;
+  }
+
+  .books_page .bio img, .blog_bio img {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .books_page .section_half {
+    display: block;
+  }
+
+  .styledHeader {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .about_page h2 {
+    margin-top: 20px;
+  }
+
+  footer img {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .about_page .button {
+    margin-bottom: 20px;
+  }
+
+  .button {
+    zoom: 2.5;
+  }
+
+  .music_page .button {
+    border-width: 4px;
+    font-size: 30px;
+    padding: 20px;
+    zoom: 1;
+  }
+
+  .tour_date {
+    font-size: 26px !important;
+  }
+
+  .tour_date .button {
+    zoom: 2;
+    margin-top: 0 !important;
+  }
+
+  .section_half {
+    margin-top: 0 !important;
+  }
+
+  .section.sponsors a {
+    width: 32%;
+  }
+
+  .section.guitars .guitar_img:not(.pedal) {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .section.guitars .guitar_img .hover {
+    height: 60px;
+    bottom: 0;
+    top: auto;
+    text-align: left;
+  }
+
+  .section.guitars .guitar_img .hover img.mini_img {
+    display: inline-block !important;
+    width: 22px;
+    vertical-align: text-bottom;
+  }
+
+  .section.guitars .guitar_img .hover .subtext {
+    display: none !important;
+  }
+
+  .section.guitars .guitar_desc {
+    display: none;
+  }
+
+  .section.guitars .guitar_desc.open {
+    display: block;
+  }
+
+  .section.guitars .guitar_desc.open .description {
+    display: none;
+  }
+
+  .section.guitars .guitar_desc.open .mini_description {
+    display: block !important;
+    overflow-y: scroll;
+  }
+
+  .section.guitars .pagin {
+    display: none;
+  }
+
+  .section.guitar_expanded .divider {
+    height: 0;
+    opacity: 0;
+    padding: 10px !important;
+  }
+
+  .guitar_img.pedal .hover {
+    display: none !important;
+  }
+
+  .guitar_description_toggle {
+    display: inline-block !important;
+  }
+
+  .music_page .music_hero {
+    width: 100%;
+  }
+
+  .music_page .section_half {
+    display: block;
+  }
+
+  .guitar_img.guitars:not(.current), .guitar_img.amp:not(.current) {
+    display: none;
+  }
+
+  .guitar_mini_toggle {
+    background-repeat: no-repeat;
+    height: 100%;
+    top: 0;
+    width: 70px;
+    background-position: center;
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    left: 0;
+    z-index: 1000;
+    cursor: pointer;
+    background-image: url(img/pageArrow.png);
+  }
+
+  .guitar_mini_toggle.next {
+    right: 0;
+    left: auto;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+}
+
+div.hero > div.hero-banner.ibanez{
+  width: 90%;
+  max-width:880px;
+  margin: 270px auto 0 auto;
+}
+
+div.hero > div.hero-banner.book{
+  width: 90%;
+  max-width:890px;
+  margin: 270px auto 0 auto;
+}
+
+div.hero > div.hero-banner.ibanez > a{
+  display: inline-block;
+}
+
+div.hero > div.hero-banner.ibanez > a:hover{
+  opacity: 1.0;
+}
+div.hero > div.hero-banner.ibanez > a:active{
+  opacity: 1.0;
+border: 3px solid #ff00ff;
+}
+div.hero > div.hero-banner.ibanez > a:focus {
+  opacity: 1.0;
+}
+
+.hero .hero-banner img{
+  width: 100%;
+  height: auto;
+}
+
+.img_section{
+  background-position: 50% 50% !important;
+}
+
+.tour_dates{
+  margin: 20px 0;
+}
+.tour_date{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px){
+
+  div.container > div > div > div > img{
+    width: 100%;
+  }
+  
+  div.container > div > div > div.section_half{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  div.container > div > div > div > img.lil_divider{
+    display: none;
+  }
+
+  div.hero{
+    height: 80vw;
+  }
+  .container > div > div.section.feed > div > div.section_half{
+    width:100%;
+  }
+
+  div.container > div > div.section > div.section_half.img_section{
+    height: 100vw;
+  }
+
+  .tour_date{
+    flex-direction: column;
+  }
+
+  .tour_date_info{
+    margin-top: 20px;
+  }
+
+  .tour_date_date{
+    font-size:0.8em;
+  }
+  .tour_date_venue{
+    font-weight: bold;
+    font-size:1.25em;
+  }
+
+  body > div.container.blog.tour > div.hero.hero_blog.tour{
+    height: auto;
+  }
+  body > div.container.blog.tour > div.hero.hero_blog.tour > div.hero_header > img.styledHeader{
+    max-width: 446px;
+  }
+  body > div.container.about > div > img.styledHeader{
+    max-width: 503px;
+    width: 90vw;
+    
+  }
+}
+@media screen and (max-width: 964px){
+  div.hero > div.hero-banner.ibanez{
+    margin-top:20%;
+  }
+  #videoAnchor > img{
+    width: 70vw;
+  }
+  .home_page > .feed_tabs{
+    zoom: 0.7;
+  }
+  .home_page > .section{
+    width: 90vw;
+  }
+  .home_page > .section{
+    text-align: center;
+  }
+  .home_page > .section > div > a{
+    display: inline-block;
+  }
+  .home_page > .section > div > a > img{
+    width: 100%;
+  }
+  .section_half{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  div > a.page_link.prev{
+    left: -30px !important;
+  }
+  div > a.page_link.next{
+    right: -30px !important;
+  }
+  .feed_wrapper{
+    width: 90vw;
+  }
+  .feed_wrapper > .section{
+    width: 100%;
+  }
+  div.music_page > img.music_hero{
+    height: 100%;
+  }
+  body > div.container> footer > img{
+    width: 90vw;
+  }
+
+  .section{
+    width: 90vw;	
+  }
+
+  .section_half{
+    width: 100%;
+    display: block;
+  }
+
+  div.container > div.music_page > div > div > img.music_hero{
+    width: 100%;
+  }
+
+  div.container > div > div > img.styledHeader{
+    width: 90vw;
+  }
+
+  div.container > div > div.section > div > div.button_wrap{
+    margin-bottom:40px;
+  }
+
+  div.container.blog.tour > div.hero.hero_blog.tour > div.hero_header{
+    margin: 0 auto;
+    left: 0;
+    position: relative;
+    width: 90vw;
+    display: block;
+    top: auto;
+  }
+}
+@media screen and (max-width: 429px){
+  .home_page > .feed_tabs{
+    zoom: 0.5;
+  }
+}
+
+.song_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+}
+.extended_copy h2{
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+.song_container .song{
+  text-align: center;
+  width: 50%;
+}
+.song_container .song:nth-child(odd){
+	padding: 0 5px 0 10px;
+}
+.song_container .song:nth-child(even){
+	padding: 0 10px 0 5px;
+}
+.song_container .song .song_title{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 11px 0 0 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.song_container .song .song_download{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 10px 0 30px;
+}
+.song_container .song .song_download_link{
+  color: white !important;
+  border: 3px solid white;
+  padding: 6px 8px 3px 8px;
+}
+.song_container .song .song_download_link{
+  margin: 0 10px;
+}
+.song_container .song .song_download_link:last-child{
+  margin: 0 0 0 10px;
+}
+.song_container .song .song_download_link:hover{
+  color: white !important;
+}
+@media screen and (max-width: 600px){
+    .song_container{
+        flex-direction: column;
+    }
+
+    .song_container .song{
+        width: 100%;
+    }
+}
